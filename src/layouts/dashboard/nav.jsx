@@ -83,8 +83,6 @@ export default function Nav({ openNav, onCloseNav }) {
         color: 'text.secondary',
         textTransform: 'capitalize',
         fontWeight: 'fontWeightMedium',
-        
-        }),
       }}
     >
      

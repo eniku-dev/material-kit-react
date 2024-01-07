@@ -71,7 +71,7 @@ export default function Nav({ openNav, onCloseNav }) {
     <Stack component="nav" spacing={0.5} sx={{ px: 2 }}>
       {navConfig.map((item) => (
        item.title === 'title' ?
-<Collapse timeout="auto" unmountOnExit>
+<Collapse active={false} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
         <ListItemButton
      

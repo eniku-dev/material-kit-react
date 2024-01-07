@@ -73,13 +73,8 @@ export default function Nav({ openNav, onCloseNav }) {
        item.title === 'newTitle' ?
 <Collapse timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItemButton>
-        </List>
+        
+<NavItem key={item.title} item={item} />        </List>
       </Collapse>
 :
         <NavItem key={item.title} item={item} />

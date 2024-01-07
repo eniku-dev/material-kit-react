@@ -70,11 +70,34 @@ export default function Nav({ openNav, onCloseNav }) {
   const renderMenu = (
     <Stack component="nav" spacing={0.5} sx={{ px: 2 }}>
       {navConfig.map((item) => (
-       item.title === 'newTitle' ?
+       item.title === 'title' ?
 <Collapse timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        
-<NavItem key={item.title} item={item} />        </List>
+        <ListItemButton
+     
+      
+      sx={{
+        minHeight: 44,
+        borderRadius: 0.75,
+        typography: 'body2',
+        color: 'text.secondary',
+        textTransform: 'capitalize',
+        fontWeight: 'fontWeightMedium',
+        ...(active && {
+          color: 'primary.main',
+          fontWeight: 'fontWeightSemiBold',
+          bgcolor: (theme) => alpha(theme.palette.primary.main, 0.08),
+          '&:hover': {
+            bgcolor: (theme) => alpha(theme.palette.primary.main, 0.16),
+          },
+        }),
+      }}
+    >
+     
+
+      <Box component="span">list items </Box>
+    </ListItemButton>
+</List>
       </Collapse>
 :
         <NavItem key={item.title} item={item} />

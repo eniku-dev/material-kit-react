@@ -70,9 +70,9 @@ export default function Nav({ openNav, onCloseNav }) {
   const renderMenu = (
     <Stack component="nav" spacing={0.5} sx={{ px: 2 }}>
       {navConfig.map((item) => (
-       {item.title === 'title' ? null 
+       item.title === 'title' ? null 
         :<NavItem key={item.title} item={item} />
-     } ))}
+      ))}
     </Stack>
   );
 

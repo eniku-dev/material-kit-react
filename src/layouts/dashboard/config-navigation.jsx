@@ -28,8 +28,8 @@ const navConfig = [
     icon: icon('ic_blog'),
   },
   {
-  title:'newTitle',
-  path:'',
+  title:'title',
+  path:'/blog',
 icon:icon('ic_blog'),
 },
   {

@@ -1,6 +1,13 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
+
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Drawer from '@mui/material/Drawer';
@@ -65,6 +72,18 @@ export default function Nav({ openNav, onCloseNav }) {
   const renderMenu = (
     <Stack component="nav" spacing={0.5} sx={{ px: 2 }}>
       {navConfig.map((item) => (
+       item.title === 'newTitle' ?
+<Collapse timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Starred" />
+          </ListItemButton>
+        </List>
+      </Collapse>
+:
         <NavItem key={item.title} item={item} />
       ))}
     </Stack>
